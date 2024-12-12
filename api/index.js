@@ -1,6 +1,4 @@
-
-
-const chrome = require('@vercel/chrome');
+const chrome = require('@sparticuz/chromium');
 const fetch = require('node-fetch');
 const puppeteer = require('puppeteer-core');
 

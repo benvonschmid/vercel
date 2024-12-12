@@ -1,4 +1,4 @@
-const chrome = require('@sparticuz/chromium');
+const chromium = require('@sparticuz/chromium');
 const fetch = require('node-fetch');
 const puppeteer = require('puppeteer-core');
 
@@ -78,10 +78,10 @@ export default async function handler(req, res) {
     const HTMLcontent = generateHTML(properties, district, formattedStreetName, streetNumber);
 
     const browser = await puppeteer.launch({
-        args: chrome.args,
-        defaultViewport: chrome.defaultViewport,
-        executablePath: await chrome.executablePath,  // Use the executablePath from @vercel/chrome
-        headless: true,  // Ensure it's in headless mode
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath(),
+        headless: true,
         ignoreHTTPSErrors: true
       });
   
